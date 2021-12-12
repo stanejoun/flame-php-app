@@ -1,0 +1,19 @@
+{
+  "roles": [
+    {
+      "name": "SUPER_ADMIN",
+      "description": "Description for role 1",
+      "priority": 1
+    },
+    {
+      "name": "ADMIN",
+      "description": "Description for role 2",
+      "priority": 2
+    },
+    {
+      "name": "USER",
+      "description": "Description for role 3",
+      "priority": 3
+    }
+  ]
+}

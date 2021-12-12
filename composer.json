@@ -1,0 +1,17 @@
+{
+	"name": "stanejoun/opframework-app",
+	"description": "OPFramework skeleton app",
+	"type": "project",
+	"require": {
+		"php": ">=8.0",
+		"ext-gettext": "*",
+		"stanejoun/opframework": "dev-master"
+	},
+	"license": "proprietary",
+	"autoload": {
+		"psr-4": {
+			"App\\": "src/"
+		}
+	},
+	"minimum-stability": "dev"
+}

@@ -1,0 +1,38 @@
+{
+	"host": "my_host",
+	"protocol": "https",
+	"cors_restricted_origins": [],
+	"secret_key": "|MY|SECRET|KEY|",
+	"hashing_algorithm": "sha256",
+	"enable_session": true,
+	"session_name": "visit",
+	"session_time": 1800,
+	"access_token_time": 600,
+	"refresh_token_time": 3600,
+	"default_routes": {
+		"login": "login",
+		"page_not_found": "page_not_found",
+		"forbidden": "forbidden",
+		"default_error": "default_error"
+	},
+	"locales": [
+		"en",
+		"fr"
+	],
+	"locale_default": "en",
+	"database": {
+		"user": "root",
+		"password": "",
+		"dsn": "mysql:host=127.0.0.1;dbname=my_db_name;charset=UTF8"
+	},
+	"cache": {
+		"enable": false,
+		"mode": "file",
+		"timeout": 10800
+	},
+	"redis": {
+		"host": "127.0.0.1",
+		"port": "6379",
+		"passphrase": ""
+	}
+}

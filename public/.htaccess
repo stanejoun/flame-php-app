@@ -1,0 +1,30 @@
+Order deny,allow
+Allow from all
+
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+RedirectMatch 404 /\.svn(/|$)
+RedirectMatch 404 /\.git(/|$)
+RedirectMatch 404 /\.ts(/|$)
+RedirectMatch 404 /.htaccess(/|$)
+RedirectMatch 404 /package.json(/|$)
+RedirectMatch 404 /tsconfig.json(/|$)
+RedirectMatch 404 /webpack.config.js(/|$)
+RedirectMatch 404 /typings.json(/|$)s
+
+Options +FollowSymLinks -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([a-zA-Z0-9_/.-]*) index.php?request_uri=$1 [QSA,L]
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
+</IfModule>
