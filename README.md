@@ -7,18 +7,24 @@ The framework source code can be found here: [stanejoun/opframework](https://git
 ## Installation
 
 1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist opframework/app [app_name]`.
+2. Run `php composer.phar create-project --prefer-dist stanejoun/opframework-app [app_name]`.
 
 If Composer is installed globally, run
 
 ```bash
-composer create-project --prefer-dist cakephp/app
+composer create-project --prefer-dist stanejoun/opframework-app
 ```
 
 In case you want to use a custom app dir name (e.g. `/myprojectname/`):
 
 ```bash
-composer create-project --prefer-dist cakephp/app myprojectname
+composer create-project --prefer-dist stanejoun/opframework-app myprojectname
+```
+
+Install the dependencies with :
+
+```bash
+composer update
 ```
 
 You can now either use your machine's webserver to view the default home page.
@@ -46,7 +52,7 @@ folder `apps/[myvuejs]or[myangular]or[myreact]`.
 
 ## Database
 
-If you choose to use a database you can play the `migrations/install/install.sql` file 
-to install the `user` entities and `refresh_token`.
-Of course, over time you will need to update the `migrations` folder to automate the production deployments.
+If you choose to use a database you can play the `migrations/install/install.sql` file to install the `user`
+and `refresh_token` entities. Of course, over time you will need to update the `migrations` folder to automate the
+production deployments.
 
