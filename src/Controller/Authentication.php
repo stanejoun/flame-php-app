@@ -6,7 +6,6 @@ use App\Model\User;
 use Stanejoun\OPFramework\Config;
 use Stanejoun\OPFramework\Controller;
 use Stanejoun\OPFramework\exceptions\BusinessException;
-use Stanejoun\OPFramework\Helper;
 use Stanejoun\OPFramework\JsonResponse;
 use Stanejoun\OPFramework\RefreshToken;
 use Stanejoun\OPFramework\Request;
@@ -59,7 +58,7 @@ class Authentication extends Controller
 	public function logout(): void
 	{
 		\Stanejoun\OPFramework\Authentication::Logout();
-		Router::Redirect(Router::GetUrl(Config::Get('login_route')));
+		Router::Redirect(Router::GetUrl(Config::Get('default_routes')->login));
 	}
 
 	#[Route('access_token', '/api/authentication/access-token', 'POST')]
