@@ -1,6 +1,6 @@
 # OPFramework Application Skeleton
 
-A skeleton for creating applications with [OPFramework](https://opframework.stanejoun.com) 1.x.
+A skeleton for creating applications with OPFramework 1.x.
 
 The framework source code can be found here: [stanejoun/opframework](https://github.com/stanejoun/opframework).
 
@@ -45,7 +45,7 @@ variable : `'OPFramework\Config::$ENVIRONMENT'`.
 
 ## Layout
 
-The app skeleton uses [JQuery](https://jquery.com/) (v3.6.0) as javascript library as an example. You can, however,
+The app skeleton uses [JQuery](https://jquery.com/) (v3.6.0) and [Bootstrap](https://getbootstrap.com/) (5.1.3) as example. You can, however,
 replace it with any other library or framework like [Vue.js](https://vuejs.org/), [Angular](https://angular.io/)
 or [React](https://en.reactjs.org/). If you choose to use a frontend framework you can store the source code into the
 folder `apps/[myvuejs]or[myangular]or[myreact]`.

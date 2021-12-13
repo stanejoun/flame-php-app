@@ -43,7 +43,8 @@ class Authentication extends Controller
 				}
 			} catch (\Exception $e) {
 				$this->render('login', (object)[
-					'error_message' => _('Email and/or password isn\'t right.'),
+					'available_db' => true,
+					'error_message' => _("Email and/or password isn't right."),
 					'input_errors' => (object)[
 						'email' => _("Maybe it's the wrong email."),
 						'password' => _("Maybe it's the wrong password."),
@@ -51,7 +52,13 @@ class Authentication extends Controller
 				]);
 			}
 		}
-		$this->render('login');
+		try {
+			$availableDb = true;
+			$testDb = User::FindOne();
+		} catch (\Error) {
+			$availableDb = false;
+		}
+		$this->render('login', (object)['available_db' => $availableDb]);
 	}
 
 	#[Route('logout', '/auth/logout')]
