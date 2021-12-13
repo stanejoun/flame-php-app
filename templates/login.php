@@ -8,11 +8,11 @@
 	<div class="container-fluid">
 		<main class="d-flex flex-column justify-content-center align-items-center">
 			<section class="col-md-5">
-				<h1 class="text-center mt-5 mb-5"><?= _('Welcome to the Open PHP Framework!'); ?></h1>
+				<h1 class="text-center mt-5 mb-5 h1"><?= _('Welcome to the Open PHP Framework!'); ?></h1>
 				<p><?= _('You have installed a skeleton of OPFramework which contains some basic implementation examples.'); ?></p>
 				<p><?= _('The examples allow you to understand the MVC, including routing, controllers, views and ORM.'); ?></p>
 				<p><?= _('Of course these examples are far from being complete and give you a small overview of the possibilities of the framework.'); ?></p>
-				<p><?= _('Furthermore, a complete documentation will be available one day.'); ?></p>
+				<p><?= _('Furthermore, a complete documentation will be available one day...'); ?></p>
 				<p><?= _("In the meantime, be curious and don't hesitate to explore the core of the framework to find the features and behavior you need."); ?></p>
 				<p><?= _('Read and understand the code which is normally written on the KISS (Keep it simple, stupid) principle.'); ?></p>
 			</section>
@@ -21,7 +21,7 @@
 				<section class="col-md-3">
 					<form method="post" action="/auth/login" class="form bg-body p-5">
 						<div class="mb-3 text-center">
-							<h1 class="h3"><?= _('Log in'); ?></h1>
+							<h3 class="h3"><?= _('Log in'); ?></h3>
 						</div>
 						<?php if (!empty($this->error_message)): ?>
 							<div class="text-center text-danger mb-4">
@@ -49,6 +49,14 @@
 						</div>
 					</form>
 				</section>
+			<?php endif; ?>
+			<?php if (!$this->available_db): ?>
+			<hr class="col-md-7">
+			<section class="col-md-3">
+				<div class="mb-3 text-center">
+					<h3 class="h3"><?= _('No database configured!'); ?></h3>
+				</div>
+			</section>
 			<?php endif; ?>
 		</main>
 	</div>

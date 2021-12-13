@@ -55,7 +55,7 @@ class Authentication extends Controller
 		try {
 			$availableDb = true;
 			$testDb = User::FindOne();
-		} catch (\Error) {
+		} catch (\Exception $e) {
 			$availableDb = false;
 		}
 		$this->render('login', (object)['available_db' => $availableDb]);

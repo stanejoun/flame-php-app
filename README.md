@@ -21,12 +21,6 @@ In case you want to use a custom app dir name (e.g. `/myprojectname/`):
 composer create-project --prefer-dist stanejoun/opframework-app myprojectname
 ```
 
-Install the dependencies with :
-
-```bash
-composer update
-```
-
 You can now either use your machine's webserver to view the default home page.
 
 ## Update
