@@ -6,7 +6,7 @@
 	"require": {
 		"php": ">=8.0",
 		"ext-gettext": "*",
-		"stanejoun/opframework": "dev-master"
+		"stanejoun/opframework": "^1.0"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "^9.3"
