@@ -13,7 +13,7 @@
 				<p><?= _('The examples allow you to understand the MVC, including routing, controllers, views and ORM.'); ?></p>
 				<p><?= _('Of course these examples are far from being complete and give you a small overview of the possibilities of the framework.'); ?></p>
 				<p><?= _('Furthermore, a complete documentation will be available one day...'); ?></p>
-				<p><?= _("In the meantime, be curious and don't hesitate to explore the core of the framework to find the features and behavior you need."); ?></p>
+				<p><?= _("In the meantime, be curious and don't hesitate to explore the core of the framework (vendor/stanejoun/opframework) to find the features and behavior you need."); ?></p>
 				<p><?= _('Read and understand the code which is normally written on the KISS (Keep it simple, stupid) principle.'); ?></p>
 			</section>
 			<?php if ($this->available_db): ?>
@@ -51,12 +51,12 @@
 				</section>
 			<?php endif; ?>
 			<?php if (!$this->available_db): ?>
-			<hr class="col-md-7">
-			<section class="col-md-3">
-				<div class="mb-3 text-center">
-					<h3 class="h3"><?= _('No database configured!'); ?></h3>
-				</div>
-			</section>
+				<hr class="col-md-7">
+				<section class="col-md-3">
+					<div class="mb-3 text-center">
+						<h4 class="h4 text-secondary"><?= _('No database configured!'); ?></h4>
+					</div>
+				</section>
 			<?php endif; ?>
 		</main>
 	</div>
