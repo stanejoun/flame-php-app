@@ -15,10 +15,4 @@ class Home extends Controller
 	{
 		$this->render('home', Authentication::GetAuthenticatedUser());
 	}
-
-	#[Route('getDateTimeAction', '/api/home/datetime', 'GET', 'USER')]
-	public function getDateTimeAction(): JsonResponse
-	{
-		return new JsonResponse(['datetime' => date('Y-m-d H:i:s')]);
-	}
 }

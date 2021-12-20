@@ -73,7 +73,7 @@ class Authentication
 				->setRequired(true),
 
 			$validator
-				->add('age')
+				->add('birth_date')
 				->setType('string')
 				->setRequired(true),
 

@@ -184,8 +184,8 @@ class User extends \Stanejoun\OPFramework\User
 
 	public function beforeInsert(): void
 	{
-		$this->uid = md5('user-uid-' . bin2hex(random_bytes(6)) . '-' . date('YmdHis'));
-		$this->salt = md5('user-salt-' . bin2hex(random_bytes(6)) . '-' . date('YmdHis'));
+		$this->uid = md5('uid-' . uniqid() . '-' . time());
+		$this->salt = md5('salt-' . uniqid() . '-' . time());
 	}
 
 	public function getPublicData(): array

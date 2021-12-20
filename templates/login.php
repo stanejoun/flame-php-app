@@ -179,8 +179,8 @@
 						<input id="inputLastName" class="form-control" name="last_name" type="text" value="Newman" placeholder="Newman" required>
 					</div>
 					<div class="mb-3">
-						<label class="form-label fw-bolder" for="inputAge"><?= _('Age'); ?></label>
-						<input id="inputAge" class="form-control" name="age" type="text" value="24/09/1988" placeholder="24/09/1988" required>
+						<label class="form-label fw-bolder" for="inputBirthDate"><?= _('Birth date'); ?></label>
+						<input id="inputBirthDate" class="form-control" name="birth_date" type="text" value="24/09/1988" placeholder="24/09/1988" required>
 					</div>
 					<div class="mb-3">
 						<label class="form-label fw-bolder" for="inputAddress"><?= _('Address'); ?></label>
