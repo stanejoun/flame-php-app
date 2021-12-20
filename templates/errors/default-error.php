@@ -7,7 +7,7 @@
 <?php $this->startBlock('content'); ?>
 	<section>
 		<h1><?= _('Error'); ?></h1>
-		<p><?= _('Something is broken.'); ?></p>
+		<p><?= _('Something is broken. Please let us know what you were doing when this error occurred. We will fix it as soon as possible. Sorry for any inconvenience caused.'); ?></p>
 		<?php if ($this->data !== null): ?>
 			<p><?= $this->getMessage(); ?></p>
 			<?php foreach ($this->getErrors() as $inputName => $error): ?>

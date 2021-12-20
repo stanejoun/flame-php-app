@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Renderer\PhantomJsRenderer;
 use Stanejoun\OPFramework\Authentication;
 use Stanejoun\OPFramework\Controller;
 use Stanejoun\OPFramework\JsonResponse;
