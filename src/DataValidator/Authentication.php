@@ -24,19 +24,6 @@ class Authentication
 		return $validator;
 	}
 
-	public function getRefreshToken(): string
-	{
-		$validator = new DataValidator();
-		$validator->setPropertiesDefinitions([
-			$validator
-				->add('refresh_token')
-				->setType('string')
-				->setRequired(true)
-		]);
-		$validator->validate();
-		return $validator->getValue('refresh_token');
-	}
-
 	public function getCreateUser(): mixed
 	{
 		$validator = new DataValidator();

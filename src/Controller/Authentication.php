@@ -112,49 +112,4 @@ class Authentication extends Controller
 		}
 		return new JsonResponse(\Stanejoun\OPFramework\Authentication::GetJSONWebToken($user));
 	}
-
-	#[Route('refresh_token', '/api/authentication/refresh-token', 'POST')]
-	public function refreshToken(): JsonResponse
-	{
-		/** @var RefreshToken $refreshToken */
-		$refreshToken = RefreshToken::FindOneBy('token', $this->dataValidator->getRefreshToken());
-		if (null !== $refreshToken) {
-			$currentTimestamp = time();
-			$currentFingerprint = Security::GetFingerprint();
-			if ($currentTimestamp <= $refreshToken->getExpiredAt() && $currentFingerprint === $refreshToken->getFingerprint()) {
-				$userId = $refreshToken->getUserId();
-				$refreshToken->delete();
-				/** @var User $user */
-				$user = User::FindOneById($userId);
-				if ($user !== null) {
-					return new JsonResponse(\Stanejoun\OPFramework\Authentication::GetJSONWebToken($user));
-				}
-			}
-		}
-		throw new BusinessException('Invalid refresh token!');
-	}
-
-	#[Route('delete_refresh_token', '/api/authentication/refresh-token/{userUid}', 'DELETE', 'ADMIN')]
-	public function deleteRefreshToken(string $userUid)
-	{
-		/** @var User $user */
-		$user = User::FindOneBy('uid', $userUid);
-		if ($user === null) {
-			throw new BusinessException('Invalid user!');
-		}
-		\Stanejoun\OPFramework\Authentication::DeleteRefreshToken($user);
-		return new jsonResponse(['message' => 'success']);
-	}
-
-	#[Route('revoke_access_token', '/api/authentication/access-token/{userUid}', 'DELETE', 'ADMIN')]
-	public function revokeAccessToken(string $userUid): JsonResponse
-	{
-		/** @var User $user */
-		$user = User::FindOneBy('uid', $userUid);
-		if ($user === null) {
-			throw new BusinessException('Invalid user!');
-		}
-		\Stanejoun\OPFramework\Authentication::RevokeAccessToken($user);
-		return new jsonResponse(['message' => 'success']);
-	}
 }

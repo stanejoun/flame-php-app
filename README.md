@@ -39,7 +39,7 @@ variable : `'OPFramework\Config::$ENVIRONMENT'`.
 
 ## Layout
 
-The app skeleton uses [JQuery](https://jquery.com/) (v3.6.0) and [Bootstrap](https://getbootstrap.com/) (5.1.3) as example. You can, however,
+The app skeleton uses [Bootstrap](https://getbootstrap.com/) (5.1.3) as example. You can, however,
 replace it with any other library or framework like [Vue.js](https://vuejs.org/), [Angular](https://angular.io/)
 or [React](https://en.reactjs.org/). If you choose to use a frontend framework you can store the source code into the
 folder `apps/[myvuejs]or[myangular]or[myreact]`.
