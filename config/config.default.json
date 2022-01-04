@@ -20,6 +20,7 @@
 		"fr"
 	],
 	"locale_default": "en",
+	"locale_file_name": "messages",
 	"database": {
 		"user": "root",
 		"password": "",
