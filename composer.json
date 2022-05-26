@@ -1,6 +1,6 @@
 {
-	"name": "stanejoun/opframework-app",
-	"description": "OPFramework skeleton app",
+	"name": "stanejoun/flame-php-app",
+	"description": "FlamePHP Application Skeleton",
 	"type": "project",
 	"license": "MIT",
 	"homepage": "https://github.com/stanejoun/opframework-app",
