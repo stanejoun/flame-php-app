@@ -1,2 +1,9 @@
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 /vendor/
 /var/
