@@ -35,7 +35,7 @@ The `config.json` file contains all the configuration needed to run the applicat
 installation. The `config.test.json` file contains the configuration for the unit tests. These config files must not be
 versioned or accessible from the web. Be sure to configure your server so that only the `public` folder is accessible
 from the web. Finally, modify the `config/constants.php` file to modify the environment
-variable : `'FlamePHP\Config::$ENVIRONMENT'`.
+variable : `'Config::devMode();'`.
 
 ## Layout
 
